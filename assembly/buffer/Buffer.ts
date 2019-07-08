@@ -262,6 +262,28 @@ export class Buffer extends Uint8Array {
     return this;
   }
 
+  write(value: string, offset: i32 = 0, length: i32 = <i32>this.dataLength, encoding: string = "utf8"): i32 {
+    let buffer: ArrayBuffer;
+    assert((offset >= 0) && (offset < <i32>this.dataLength));
+    length = min<i32>(length, this.dataLength - offset);
+    if (encoding == "utf8" || encoding == "utf-8") {
+      buffer = String.UTF8.encode(value, false);
+    } else if (encoding == "utf16le") {
+      let count = min<i32>(value.length << 1, length);
+      memory.copy(this.dataStart, changetype<usize>(value), count);
+      return count;
+    } else if (encoding == "hex") {
+      buffer = Encoding.HEX.encode(value);
+    } else {
+      assert(false);
+      return 0;
+    }
+
+    let written = min<i32>(buffer.byteLength, length);
+    memory.copy(this.dataStart, changetype<usize>(buffer), written);
+    return written;
+  }
+
   toString(encoding: string = "utf8", begin: i32 = 0, end: i32 = this.length): string {
     var len = this.length;
     begin = begin < 0 ? max(len + begin, 0) : min(begin, len);

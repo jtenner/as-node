@@ -353,4 +353,43 @@ describe("Buffer", () => {
     let actual: string = Buffer.from<string>("hello world").toString("hex");
     expect<string>(actual).toBe("68656c6c6f20776f726c64");
   });
+
+  it("should write strings in hex", () => {
+    let target = new Buffer(10);
+    target.write("DEADBEEF", 0, 4, "hex");
+    expect<u8>(target[0]).toBe(0xDE);
+    expect<u8>(target[1]).toBe(0xAD);
+    expect<u8>(target[2]).toBe(0xBE);
+    expect<u8>(target[3]).toBe(0xEF);
+    expect<u8>(target[4]).toBe(0x00);
+    expect<u8>(target[5]).toBe(0x00);
+    expect<u8>(target[6]).toBe(0x00);
+    expect<u8>(target[7]).toBe(0x00);
+    expect<u8>(target[8]).toBe(0x00);
+    expect<u8>(target[9]).toBe(0x00);
+  });
+
+  it("should write hello world in utf8", () => {
+    let target = new Buffer(11);
+    target.write("hello world");
+
+    expect<u8>(target[0]).toBe(0x68);
+    expect<u8>(target[1]).toBe(0x65);
+    expect<u8>(target[2]).toBe(0x6c);
+    expect<u8>(target[3]).toBe(0x6c);
+    expect<u8>(target[4]).toBe(0x6f);
+    expect<u8>(target[5]).toBe(0x20);
+    expect<u8>(target[6]).toBe(0x77);
+    expect<u8>(target[7]).toBe(0x6f);
+    expect<u8>(target[8]).toBe(0x72);
+    expect<u8>(target[9]).toBe(0x6c);
+    expect<u8>(target[10]).toBe(0x64);
+  });
+
+  it("should write hello world in utf16", () => {
+    let expected = Buffer.from<string>("hello world", "utf16le");
+    let target = new Buffer(22);
+    target.write("hello world", 0, 22, "utf16le");
+    for (let i = 0; i < 22; i++) expect<u8>(target[i]).toBe(expected[i]);
+  });
 });

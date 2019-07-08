@@ -151,9 +151,13 @@
  (data (i32.const 6280) "^\00\00\00\01\00\00\00\01\00\00\00^\00\00\00s\00h\00o\00u\00l\00d\00 \00i\00n\00i\00t\00i\00a\00l\00i\00z\00e\00 \00a\00 \00h\00e\00l\00l\00o\00 \00w\00o\00r\00l\00d\00 \00s\00t\00r\00i\00n\00g\00 \00f\00r\00o\00m\00 \00h\00e\00x\00")
  (data (i32.const 6392) ",\00\00\00\01\00\00\00\01\00\00\00,\00\00\006\008\006\005\006\00c\006\00c\006\00f\002\000\007\007\006\00f\007\002\006\00c\006\004\00")
  (data (i32.const 6456) "x\00\00\00\01\00\00\00\01\00\00\00x\00\00\00s\00h\00o\00u\00l\00d\00 \00r\00e\00t\00u\00r\00n\00 \00s\00t\00r\00i\00n\00g\00s\00 \00w\00i\00t\00h\00 \00c\00o\00r\00r\00e\00c\00t\00 \00v\00a\00l\00u\00e\00s\00 \00u\00s\00i\00n\00g\00 \00h\00e\00x\00 \00e\00n\00c\00o\00d\00i\00n\00g\00")
- (data (i32.const 6592) "\16\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\001\00\00\00\02\00\00\001\00\00\00\03\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\93\04\00\00\02\00\00\00\10\00\00\00\00\00\00\00\13\0d\00\00\02\00\00\003\04\00\00\02\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\93\00\00\00\02\00\00\00")
- (table $0 52 funcref)
- (elem (i32.const 0) $null $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|0 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|1 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|2 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|3 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|4 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|5 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|6 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|7 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|8 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|9 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|10 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|11 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|12 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|13 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|14 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|15 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|16 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|17 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|18 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|19 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|20 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|21 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|22 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|23 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|24 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|25 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|26 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|27 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|28 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|29 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|30 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|31 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|32 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|33 $assembly/buffer/Buffer/BUFFER_COMPARATOR $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|34 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|35 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|36 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|37 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|38 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|39 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|40 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|41 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|42 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|43 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|44 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|45 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|46 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|47 $start:assembly/__tests__/Buffer.spec~anonymous|0 $start:node_modules/as-pect/assembly/internal/noOp~anonymous|0)
+ (data (i32.const 6592) "6\00\00\00\01\00\00\00\01\00\00\006\00\00\00s\00h\00o\00u\00l\00d\00 \00w\00r\00i\00t\00e\00 \00s\00t\00r\00i\00n\00g\00s\00 \00i\00n\00 \00h\00e\00x\00")
+ (data (i32.const 6664) "\10\00\00\00\01\00\00\00\01\00\00\00\10\00\00\00D\00E\00A\00D\00B\00E\00E\00F\00")
+ (data (i32.const 6696) "@\00\00\00\01\00\00\00\01\00\00\00@\00\00\00s\00h\00o\00u\00l\00d\00 \00w\00r\00i\00t\00e\00 \00h\00e\00l\00l\00o\00 \00w\00o\00r\00l\00d\00 \00i\00n\00 \00u\00t\00f\008\00")
+ (data (i32.const 6776) "B\00\00\00\01\00\00\00\01\00\00\00B\00\00\00s\00h\00o\00u\00l\00d\00 \00w\00r\00i\00t\00e\00 \00h\00e\00l\00l\00o\00 \00w\00o\00r\00l\00d\00 \00i\00n\00 \00u\00t\00f\001\006\00")
+ (data (i32.const 6864) "\16\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\001\00\00\00\02\00\00\001\00\00\00\03\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\93\04\00\00\02\00\00\00\10\00\00\00\00\00\00\00\13\0d\00\00\02\00\00\003\04\00\00\02\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\10\00\00\00\00\00\00\00\93\00\00\00\02\00\00\00")
+ (table $0 55 funcref)
+ (elem (i32.const 0) $null $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|0 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|1 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|2 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|3 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|4 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|5 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|6 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|7 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|8 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|9 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|10 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|11 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|12 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|13 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|14 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|15 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|16 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|17 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|18 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|19 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|20 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|21 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|22 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|23 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|24 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|25 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|26 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|27 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|28 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|29 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|30 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|31 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|32 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|33 $assembly/buffer/Buffer/BUFFER_COMPARATOR $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|34 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|35 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|36 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|37 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|38 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|39 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|40 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|41 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|42 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|43 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|44 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|45 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|46 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|47 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|48 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|49 $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|50 $start:assembly/__tests__/Buffer.spec~anonymous|0 $start:node_modules/as-pect/assembly/internal/noOp~anonymous|0)
  (global $~lib/rt/tlsf/ROOT (mut i32) (i32.const 0))
  (global $~lib/rt/pure/CUR (mut i32) (i32.const 0))
  (global $~lib/rt/pure/END (mut i32) (i32.const 0))
@@ -177,12 +181,12 @@
  (global $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.stackTrace (mut i32) (i32.const 0))
  (global $~lib/builtins/i32.MAX_VALUE i32 (i32.const 2147483647))
  (global $~lib/argc (mut i32) (i32.const 0))
- (global $node_modules/as-pect/assembly/internal/noOp/noOp i32 (i32.const 51))
+ (global $node_modules/as-pect/assembly/internal/noOp/noOp i32 (i32.const 54))
  (global $node_modules/as-pect/assembly/internal/log/ignoreLogs (mut i32) (i32.const 0))
  (global $node_modules/as-pect/assembly/internal/RTrace/RTrace.enabled (mut i32) (i32.const 1))
  (global $~lib/started (mut i32) (i32.const 0))
- (global $~lib/rt/__rtti_base i32 (i32.const 6592))
- (global $~lib/heap/__heap_base i32 (i32.const 6772))
+ (global $~lib/rt/__rtti_base i32 (i32.const 6864))
+ (global $~lib/heap/__heap_base i32 (i32.const 7044))
  (export "__start" (func $start))
  (export "memory" (memory $0))
  (export "__alloc" (func $~lib/rt/tlsf/__alloc))
@@ -10998,7 +11002,6 @@
   end
   local.get $2
   call $~lib/rt/pure/__retain
-  call $~lib/rt/pure/__retain
  )
  (func $assembly/buffer/Buffer/Buffer#toString (; 217 ;) (type $FUNCSIG$iiiii) (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (result i32)
   (local $4 i32)
@@ -11136,7 +11139,7 @@
   if
    i32.const 0
    i32.const 904
-   i32.const 279
+   i32.const 301
    i32.const 4
    call $~lib/builtins/abort
    unreachable
@@ -11452,7 +11455,512 @@
   local.get $2
   call $~lib/rt/pure/__release
  )
- (func $start:assembly/__tests__/Buffer.spec~anonymous|0 (; 225 ;) (type $FUNCSIG$v)
+ (func $assembly/buffer/Buffer/Buffer#write (; 225 ;) (type $FUNCSIG$iiiiii) (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (param $4 i32) (result i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  local.get $1
+  call $~lib/rt/pure/__retain
+  drop
+  local.get $4
+  call $~lib/rt/pure/__retain
+  drop
+  i32.const 0
+  local.set $5
+  local.get $2
+  i32.const 0
+  i32.ge_s
+  if (result i32)
+   local.get $2
+   local.get $0
+   i32.load offset=8
+   i32.lt_s
+  else   
+   i32.const 0
+  end
+  i32.eqz
+  if
+   i32.const 0
+   i32.const 904
+   i32.const 267
+   i32.const 4
+   call $~lib/builtins/abort
+   unreachable
+  end
+  local.get $3
+  local.tee $6
+  local.get $0
+  i32.load offset=8
+  local.get $2
+  i32.sub
+  local.tee $7
+  local.get $6
+  local.get $7
+  i32.lt_s
+  select
+  local.set $3
+  local.get $4
+  i32.const 1328
+  call $~lib/string/String.__eq
+  if (result i32)
+   i32.const 1
+  else   
+   local.get $4
+   i32.const 1352
+   call $~lib/string/String.__eq
+  end
+  if
+   local.get $1
+   i32.const 0
+   call $~lib/string/String.UTF8.encode
+   local.set $7
+   local.get $5
+   call $~lib/rt/pure/__release
+   local.get $7
+   local.set $5
+  else   
+   local.get $4
+   i32.const 1432
+   call $~lib/string/String.__eq
+   if
+    local.get $1
+    call $~lib/string/String#get:length
+    i32.const 1
+    i32.shl
+    local.tee $7
+    local.get $3
+    local.tee $6
+    local.get $7
+    local.get $6
+    i32.lt_s
+    select
+    local.set $7
+    local.get $0
+    i32.load offset=4
+    local.get $1
+    local.get $7
+    call $~lib/memory/memory.copy
+    local.get $7
+    local.set $6
+    local.get $1
+    call $~lib/rt/pure/__release
+    local.get $4
+    call $~lib/rt/pure/__release
+    local.get $5
+    call $~lib/rt/pure/__release
+    local.get $6
+    return
+   else    
+    local.get $4
+    i32.const 1464
+    call $~lib/string/String.__eq
+    if
+     local.get $1
+     call $assembly/encoding/HexEncoding/Encoding.HEX.encode
+     local.set $6
+     local.get $5
+     call $~lib/rt/pure/__release
+     local.get $6
+     local.set $5
+    else     
+     i32.const 0
+     i32.eqz
+     if
+      i32.const 0
+      i32.const 904
+      i32.const 278
+      i32.const 6
+      call $~lib/builtins/abort
+      unreachable
+     end
+     i32.const 0
+     local.set $6
+     local.get $1
+     call $~lib/rt/pure/__release
+     local.get $4
+     call $~lib/rt/pure/__release
+     local.get $5
+     call $~lib/rt/pure/__release
+     local.get $6
+     return
+    end
+   end
+  end
+  local.get $5
+  call $~lib/arraybuffer/ArrayBuffer#get:byteLength
+  local.tee $6
+  local.get $3
+  local.tee $7
+  local.get $6
+  local.get $7
+  i32.lt_s
+  select
+  local.set $6
+  local.get $0
+  i32.load offset=4
+  local.get $5
+  local.get $6
+  call $~lib/memory/memory.copy
+  local.get $6
+  local.set $7
+  local.get $5
+  call $~lib/rt/pure/__release
+  local.get $1
+  call $~lib/rt/pure/__release
+  local.get $4
+  call $~lib/rt/pure/__release
+  local.get $7
+ )
+ (func $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|48 (; 226 ;) (type $FUNCSIG$v)
+  (local $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  (local $10 i32)
+  i32.const 0
+  i32.const 10
+  call $assembly/buffer/Buffer/Buffer#constructor
+  local.set $0
+  local.get $0
+  i32.const 6680
+  i32.const 0
+  i32.const 4
+  i32.const 1464
+  call $assembly/buffer/Buffer/Buffer#write
+  drop
+  local.get $0
+  i32.const 0
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $1
+  i32.const 222
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 1
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $2
+  i32.const 173
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 2
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $3
+  i32.const 190
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 3
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $4
+  i32.const 239
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 4
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $5
+  i32.const 0
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 5
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $6
+  i32.const 0
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 6
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $7
+  i32.const 0
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 7
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $8
+  i32.const 0
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 8
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $9
+  i32.const 0
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 9
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $10
+  i32.const 0
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  call $~lib/rt/pure/__release
+  local.get $1
+  call $~lib/rt/pure/__release
+  local.get $2
+  call $~lib/rt/pure/__release
+  local.get $3
+  call $~lib/rt/pure/__release
+  local.get $4
+  call $~lib/rt/pure/__release
+  local.get $5
+  call $~lib/rt/pure/__release
+  local.get $6
+  call $~lib/rt/pure/__release
+  local.get $7
+  call $~lib/rt/pure/__release
+  local.get $8
+  call $~lib/rt/pure/__release
+  local.get $9
+  call $~lib/rt/pure/__release
+  local.get $10
+  call $~lib/rt/pure/__release
+ )
+ (func $assembly/buffer/Buffer/Buffer#write|trampoline (; 227 ;) (type $FUNCSIG$iiiiii) (param $0 i32) (param $1 i32) (param $2 i32) (param $3 i32) (param $4 i32) (result i32)
+  block $3of3
+   block $2of3
+    block $1of3
+     block $0of3
+      block $outOfRange
+       global.get $~lib/argc
+       i32.const 1
+       i32.sub
+       br_table $0of3 $1of3 $2of3 $3of3 $outOfRange
+      end
+      unreachable
+     end
+     i32.const 0
+     local.set $2
+    end
+    local.get $0
+    i32.load offset=8
+    local.set $3
+   end
+   i32.const 1328
+   local.set $4
+  end
+  local.get $0
+  local.get $1
+  local.get $2
+  local.get $3
+  local.get $4
+  call $assembly/buffer/Buffer/Buffer#write
+ )
+ (func $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|49 (; 228 ;) (type $FUNCSIG$v)
+  (local $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  (local $10 i32)
+  (local $11 i32)
+  i32.const 0
+  i32.const 11
+  call $assembly/buffer/Buffer/Buffer#constructor
+  local.set $0
+  i32.const 1
+  global.set $~lib/argc
+  local.get $0
+  i32.const 6256
+  i32.const 0
+  i32.const 0
+  i32.const 1328
+  call $assembly/buffer/Buffer/Buffer#write|trampoline
+  drop
+  local.get $0
+  i32.const 0
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $1
+  i32.const 104
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 1
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $2
+  i32.const 101
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 2
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $3
+  i32.const 108
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 3
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $4
+  i32.const 108
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 4
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $5
+  i32.const 111
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 5
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $6
+  i32.const 32
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 6
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $7
+  i32.const 119
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 7
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $8
+  i32.const 111
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 8
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $9
+  i32.const 114
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 9
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $10
+  i32.const 108
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  i32.const 10
+  call $~lib/typedarray/Uint8Array#__get
+  call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+  local.tee $11
+  i32.const 100
+  i32.const 608
+  call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+  local.get $0
+  call $~lib/rt/pure/__release
+  local.get $1
+  call $~lib/rt/pure/__release
+  local.get $2
+  call $~lib/rt/pure/__release
+  local.get $3
+  call $~lib/rt/pure/__release
+  local.get $4
+  call $~lib/rt/pure/__release
+  local.get $5
+  call $~lib/rt/pure/__release
+  local.get $6
+  call $~lib/rt/pure/__release
+  local.get $7
+  call $~lib/rt/pure/__release
+  local.get $8
+  call $~lib/rt/pure/__release
+  local.get $9
+  call $~lib/rt/pure/__release
+  local.get $10
+  call $~lib/rt/pure/__release
+  local.get $11
+  call $~lib/rt/pure/__release
+ )
+ (func $start:assembly/__tests__/Buffer.spec~anonymous|0~anonymous|50 (; 229 ;) (type $FUNCSIG$v)
+  (local $0 i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  i32.const 6256
+  i32.const 1432
+  call $assembly/buffer/Buffer/Buffer.from<~lib/string/String>
+  local.set $0
+  i32.const 0
+  i32.const 22
+  call $assembly/buffer/Buffer/Buffer#constructor
+  local.set $1
+  local.get $1
+  i32.const 6256
+  i32.const 0
+  i32.const 22
+  i32.const 1432
+  call $assembly/buffer/Buffer/Buffer#write
+  drop
+  block $break|0
+   i32.const 0
+   local.set $2
+   loop $loop|0
+    local.get $2
+    i32.const 22
+    i32.lt_s
+    i32.eqz
+    br_if $break|0
+    local.get $1
+    local.get $2
+    call $~lib/typedarray/Uint8Array#__get
+    call $node_modules/as-pect/assembly/internal/Expectation/expect<u8>
+    local.tee $3
+    local.get $0
+    local.get $2
+    call $~lib/typedarray/Uint8Array#__get
+    i32.const 608
+    call $node_modules/as-pect/assembly/internal/Expectation/Expectation<u8>#toBe
+    local.get $2
+    i32.const 1
+    i32.add
+    local.set $2
+    local.get $3
+    call $~lib/rt/pure/__release
+    br $loop|0
+   end
+   unreachable
+  end
+  local.get $0
+  call $~lib/rt/pure/__release
+  local.get $1
+  call $~lib/rt/pure/__release
+ )
+ (func $start:assembly/__tests__/Buffer.spec~anonymous|0 (; 230 ;) (type $FUNCSIG$v)
   i32.const 304
   i32.const 1
   call $node_modules/as-pect/assembly/internal/Test/it
@@ -11618,11 +12126,20 @@
   i32.const 6472
   i32.const 49
   call $node_modules/as-pect/assembly/internal/Test/it
+  i32.const 6608
+  i32.const 50
+  call $node_modules/as-pect/assembly/internal/Test/it
+  i32.const 6712
+  i32.const 51
+  call $node_modules/as-pect/assembly/internal/Test/it
+  i32.const 6792
+  i32.const 52
+  call $node_modules/as-pect/assembly/internal/Test/it
  )
- (func $start:node_modules/as-pect/assembly/internal/noOp~anonymous|0 (; 226 ;) (type $FUNCSIG$v)
+ (func $start:node_modules/as-pect/assembly/internal/noOp~anonymous|0 (; 231 ;) (type $FUNCSIG$v)
   nop
  )
- (func $node_modules/as-pect/assembly/internal/Describe/describe (; 227 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $node_modules/as-pect/assembly/internal/Describe/describe (; 232 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   local.get $0
   call $~lib/rt/pure/__retain
   drop
@@ -11636,22 +12153,22 @@
   local.get $0
   call $~lib/rt/pure/__release
  )
- (func $start:assembly/__tests__/Buffer.spec (; 228 ;) (type $FUNCSIG$v)
+ (func $start:assembly/__tests__/Buffer.spec (; 233 ;) (type $FUNCSIG$v)
   i32.const 272
-  i32.const 50
+  i32.const 53
   call $node_modules/as-pect/assembly/internal/Describe/describe
  )
- (func $node_modules/as-pect/assembly/index/__ready (; 229 ;) (type $FUNCSIG$v)
+ (func $node_modules/as-pect/assembly/index/__ready (; 234 ;) (type $FUNCSIG$v)
   i32.const 1
   global.set $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.ready
  )
- (func $node_modules/as-pect/assembly/internal/call/__call (; 230 ;) (type $FUNCSIG$vi) (param $0 i32)
+ (func $node_modules/as-pect/assembly/internal/call/__call (; 235 ;) (type $FUNCSIG$vi) (param $0 i32)
   i32.const 0
   global.set $~lib/argc
   local.get $0
   call_indirect (type $FUNCSIG$v)
  )
- (func $node_modules/as-pect/assembly/internal/report/reportActual/__sendActual (; 231 ;) (type $FUNCSIG$v)
+ (func $node_modules/as-pect/assembly/internal/report/reportActual/__sendActual (; 236 ;) (type $FUNCSIG$v)
   (local $0 i32)
   block $break|0
    block $case7|0
@@ -11739,7 +12256,7 @@
    br $break|0
   end
  )
- (func $node_modules/as-pect/assembly/internal/report/reportExpected/__sendExpected (; 232 ;) (type $FUNCSIG$v)
+ (func $node_modules/as-pect/assembly/internal/report/reportExpected/__sendExpected (; 237 ;) (type $FUNCSIG$v)
   (local $0 i32)
   block $break|0
    block $case9|0
@@ -11857,24 +12374,24 @@
    br $break|0
   end
  )
- (func $node_modules/as-pect/assembly/internal/log/__ignoreLogs (; 233 ;) (type $FUNCSIG$vi) (param $0 i32)
+ (func $node_modules/as-pect/assembly/internal/log/__ignoreLogs (; 238 ;) (type $FUNCSIG$vi) (param $0 i32)
   local.get $0
   i32.const 0
   i32.ne
   global.set $node_modules/as-pect/assembly/internal/log/ignoreLogs
  )
- (func $node_modules/as-pect/assembly/internal/RTrace/__disableRTrace (; 234 ;) (type $FUNCSIG$v)
+ (func $node_modules/as-pect/assembly/internal/RTrace/__disableRTrace (; 239 ;) (type $FUNCSIG$v)
   i32.const 0
   global.set $node_modules/as-pect/assembly/internal/RTrace/RTrace.enabled
  )
- (func $node_modules/as-pect/assembly/internal/RTrace/__getUsizeArrayId (; 235 ;) (type $FUNCSIG$i) (result i32)
+ (func $node_modules/as-pect/assembly/internal/RTrace/__getUsizeArrayId (; 240 ;) (type $FUNCSIG$i) (result i32)
   i32.const 21
  )
- (func $node_modules/as-pect/assembly/internal/Expectation/__cleanup (; 236 ;) (type $FUNCSIG$v)
+ (func $node_modules/as-pect/assembly/internal/Expectation/__cleanup (; 241 ;) (type $FUNCSIG$v)
   call $node_modules/as-pect/assembly/internal/report/reportExpected/Expected.clear
   call $node_modules/as-pect/assembly/internal/report/reportActual/Actual.clear
  )
- (func $start (; 237 ;) (type $FUNCSIG$v)
+ (func $start (; 242 ;) (type $FUNCSIG$v)
   global.get $~lib/started
   if
    return
@@ -11884,19 +12401,19 @@
   end
   call $start:assembly/__tests__/Buffer.spec
  )
- (func $~lib/array/Array<i32>#__visit_impl (; 238 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $~lib/array/Array<i32>#__visit_impl (; 243 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   nop
  )
- (func $~lib/array/Array<f64>#__visit_impl (; 239 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $~lib/array/Array<f64>#__visit_impl (; 244 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   nop
  )
- (func $~lib/array/Array<i8>#__visit_impl (; 240 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $~lib/array/Array<i8>#__visit_impl (; 245 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   nop
  )
- (func $~lib/array/Array<usize>#__visit_impl (; 241 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $~lib/array/Array<usize>#__visit_impl (; 246 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   nop
  )
- (func $~lib/rt/pure/__visit (; 242 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $~lib/rt/pure/__visit (; 247 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   (local $2 i32)
   (local $3 i32)
   local.get $0
@@ -12030,7 +12547,7 @@
    end
   end
  )
- (func $~lib/rt/__visit_members (; 243 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
+ (func $~lib/rt/__visit_members (; 248 ;) (type $FUNCSIG$vii) (param $0 i32) (param $1 i32)
   (local $2 i32)
   block $block$4$break
    block $switch$1$default
@@ -12093,6 +12610,6 @@
   end
   return
  )
- (func $null (; 244 ;) (type $FUNCSIG$v)
+ (func $null (; 249 ;) (type $FUNCSIG$v)
  )
 )
