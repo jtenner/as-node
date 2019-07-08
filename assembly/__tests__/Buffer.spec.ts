@@ -88,14 +88,14 @@ describe("Buffer", () => {
     expect<i64>(LE).toBe(0xEFBEADDEEFBEADDE);
   });
 
-  itThrows("when readBigInt64BE offset is out of range", () => {
+  itThrows("when readBigUInt64BE offset is out of range", () => {
     let buffer = new Buffer(8);
-    buffer.readBigInt64BE(1); // throws here
+    buffer.readBigUInt64BE(1); // throws here
   });
 
   itThrows("when readBigInt64LE offset is out of range", () => {
     let buffer = new Buffer(8);
-    buffer.readBigInt64LE(1); // throws here
+    buffer.readBigUInt64LE(1); // throws here
   });
 
   it("should read BE and LE f64 values", () => {
@@ -134,5 +134,99 @@ describe("Buffer", () => {
   itThrows("when readFloatLE offset is out of range", () => {
     let buffer = new Buffer(4);
     buffer.readFloatLE(1); // throws here
+  });
+
+  it("should read single bytes", () => {
+    let buffer = Buffer.from<i32[]>([-1]);
+    let i8value = buffer.readInt8(0);
+    let u8value = buffer.readUInt8(0);
+    expect<u8>(u8value).toBe(255);
+    expect<i8>(i8value).toBe(-1);
+  });
+
+  itThrows("when offset is out of range for u8", () => {
+    let buffer = new Buffer(1);
+    let result = buffer[1]; // throws
+  });
+
+  itThrows("when offset is out of range for i8", () => {
+    let buffer = new Buffer(1);
+    let result = buffer.readInt8(1); // throws
+  });
+
+  it("should read BE and LE i16 values", () => {
+    const buf = Buffer.from<i32[]>([0, 5]);
+
+    let BE = buf.readInt16BE(0);
+    let LE = buf.readInt16LE(0);
+    expect<i16>(BE).toBe(5);
+    expect<i16>(LE).toBe(1280);
+  });
+
+  itThrows("when readInt16BE offset is out of range", () => {
+    let buffer = new Buffer(2);
+    buffer.readInt16BE(1); // throws here
+  });
+
+  itThrows("when readInt16LE offset is out of range", () => {
+    let buffer = new Buffer(2);
+    buffer.readInt16LE(1); // throws here
+  });
+
+  it("should read BE and LE u16 values", () => {
+    const buf = Buffer.from<i32[]>([0, 5]);
+
+    let BE = buf.readUInt16BE(0);
+    let LE = buf.readUInt16LE(0);
+    expect<u16>(BE).toBe(5);
+    expect<u16>(LE).toBe(1280);
+  });
+
+  itThrows("when readUInt16BE offset is out of range", () => {
+    let buffer = new Buffer(2);
+    buffer.readUInt16BE(1); // throws here
+  });
+
+  itThrows("when readInt16LE offset is out of range", () => {
+    let buffer = new Buffer(2);
+    buffer.readUInt16LE(1); // throws here
+  });
+
+  it("should read BE and LE i32 values", () => {
+    let buf = Buffer.from<i32[]>([0x12, 0x34, 0x56, 0x78]);
+
+    let BE = buf.readInt32BE(0);
+    let LE = buf.readInt32LE(0);
+    expect<i32>(LE).toBe(0x78563412);
+    expect<i32>(BE).toBe(0x12345678);
+  });
+
+  itThrows("when readInt32BE offset is out of range", () => {
+    let buffer = new Buffer(4);
+    buffer.readInt32BE(1); // throws here
+  });
+
+  itThrows("when readInt32LE offset is out of range", () => {
+    let buffer = new Buffer(4);
+    buffer.readInt32LE(1); // throws here
+  });
+
+  it("should read BE and LE u32 values", () => {
+    let buf = Buffer.from<i32[]>([0x12, 0x34, 0x56, 0x78]);
+
+    let BE = buf.readUInt32BE(0);
+    let LE = buf.readUInt32LE(0);
+    expect<u32>(LE).toBe(0x78563412);
+    expect<u32>(BE).toBe(0x12345678);
+  });
+
+  itThrows("when readUInt32BE offset is out of range", () => {
+    let buffer = new Buffer(4);
+    buffer.readUInt32BE(1); // throws here
+  });
+
+  itThrows("when readUInt32LE offset is out of range", () => {
+    let buffer = new Buffer(4);
+    buffer.readUInt32LE(1); // throws here
   });
 });

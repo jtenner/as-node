@@ -94,4 +94,54 @@ export class Buffer extends Uint8Array {
     assert(offset <= this.dataLength - 4);
     return load<f32>(this.dataStart + offset);
   }
+
+  readInt8(offset: usize): i8 {
+    assert(offset < this.dataLength);
+    return load<i8>(this.dataStart + offset);
+  }
+
+  readUInt8(offset: usize): u8 {
+    assert(offset < this.dataLength);
+    return load<u8>(this.dataStart + offset);
+  }
+
+  readInt16BE(offset: usize): i16 {
+    assert(offset <= this.dataLength - 2);
+    return bswap<i16>(load<i16>(this.dataStart + offset));
+  }
+
+  readInt16LE(offset: usize): i16 {
+    assert(offset <= this.dataLength - 2);
+    return load<i16>(this.dataStart + offset);
+  }
+
+  readUInt16BE(offset: usize): u16 {
+    assert(offset <= this.dataLength - 2);
+    return bswap<u16>(load<u16>(this.dataStart + offset));
+  }
+
+  readUInt16LE(offset: usize): u16 {
+    assert(offset <= this.dataLength - 2);
+    return load<u16>(this.dataStart + offset);
+  }
+
+  readInt32BE(offset: usize): i32 {
+    assert(offset <= this.dataLength - 4);
+    return bswap<i32>(load<i32>(this.dataStart + offset));
+  }
+
+  readInt32LE(offset: usize): i32 {
+    assert(offset <= this.dataLength - 4);
+    return load<i32>(this.dataStart + offset);
+  }
+
+  readUInt32BE(offset: usize): u32 {
+    assert(offset <= this.dataLength - 4);
+    return bswap<u32>(load<u32>(this.dataStart + offset));
+  }
+
+  readUInt32LE(offset: usize): u32 {
+    assert(offset <= this.dataLength - 4);
+    return load<u32>(this.dataStart + offset);
+  }
 }
