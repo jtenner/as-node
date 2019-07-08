@@ -54,6 +54,21 @@ export class Buffer extends Uint8Array {
     return null;
   }
 
+  public static allocUnsafe(size: i32): Buffer {
+    assert(size > 0);
+    let underlying = __alloc(size, idof<ArrayBuffer>());
+    let buffer = __alloc(offsetof<Buffer>(), idof<Buffer>());
+    store<usize>(buffer, __retain(underlying), offsetof<Buffer>("dataStart"));
+    store<u32>(buffer, size, offsetof<Buffer>("dataLength"));
+    store<usize>(buffer, underlying, offsetof<Buffer>("data"));
+    return changetype<Buffer>(buffer);
+  }
+
+  public static alloc<T>(size: i32, fill: T = null, encoding: string = null): Buffer {
+    let buffer = Buffer.allocUnsafe(size);
+    return buffer.fill<T>(fill, 0, size, encoding);
+  }
+
   readBigInt64BE(offset: usize): i64 {
     assert(offset <= this.dataLength - 8);
     return bswap<i64>(load<i64>(this.dataStart + offset));
@@ -156,16 +171,55 @@ export class Buffer extends Uint8Array {
     return out;
   }
 
-  fill(value: i32, start: i32 = 0, end: i32 = i32.MAX_VALUE): Buffer {
+  fill<T>(value: T, start: i32 = 0, end: i32 = i32.MAX_VALUE, encoding: string = null): Buffer {
     var dataStart = this.dataStart;
     var length = this.length;
     start = start < 0 ? max(length + start, 0) : min(start, length);
     end   = end   < 0 ? max(length + end,   0) : min(end,   length);
-    if (sizeof<u8>() == 1) {
-      if (start < end) memory.fill(dataStart + <usize>start, <u8>value, <usize>(end - start));
+    var count = end - start;
+    if (isManaged<T>()) {
+      let sourceStart: usize = 0;
+      let sourceLength: i32;
+      let buffer: ArrayBuffer = null;
+      if (value == null) {
+        for (; start < end; ++start) {
+          store<u8>(dataStart + (<usize>start), value);
+        }
+      } else if (value instanceof ArrayBuffer) {
+        sourceStart = changetype<usize>(value);
+        sourceLength = value.byteLength;
+      } else if (value instanceof String) {
+        if (encoding == null) encoding = "utf8";
+        if (encoding == "utf8" || encoding == "utf-8") {
+          buffer = String.UTF8.encode(value);
+          sourceStart = changetype<usize>(buffer);
+          sourceLength = buffer.byteLength;
+        } else if (encoding == "utf16le") {
+          sourceStart = changetype<usize>(value);
+          sourceLength = value.length << 1;
+        } else if (encoding == "hex") {
+          buffer = Encoding.HEX.encode(value);
+          sourceStart = changetype<usize>(buffer);
+          sourceLength = buffer.byteLength;
+        }
+      } else if (value instanceof ArrayBufferView) {
+        sourceStart = value.dataStart;
+        sourceLength = value.dataLength;
+      }
+      if (sourceStart == 0) {
+        memory.fill(dataStart + start, 0, count);
+      } else {
+        for (let i = 0; i < count; i++) {
+          store<u8>(dataStart + start + i, load<u8>(sourceStart + (i % sourceLength)));
+        }
+      }
     } else {
-      for (; start < end; ++start) {
-        store<u8>(dataStart + (<usize>start), value);
+      if (sizeof<u8>() == 1) {
+        if (start < end) memory.fill(dataStart + <usize>start, <u8>value, <usize>(end - start));
+      } else {
+        for (; start < end; ++start) {
+          store<u8>(dataStart + (<usize>start), value);
+        }
       }
     }
     return this;

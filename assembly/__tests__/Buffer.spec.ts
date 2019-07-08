@@ -242,7 +242,7 @@ describe("Buffer", () => {
 
   it("should fill a buffer", () => {
     let arr = new Buffer(100);
-    arr.fill(100);
+    arr.fill<i32>(100);
     for(let i = 0; i < 100; i++) expect<u8>(arr[i]).toBe(100);
   });
 
@@ -391,5 +391,42 @@ describe("Buffer", () => {
     let target = new Buffer(22);
     target.write("hello world", 0, 22, "utf16le");
     for (let i = 0; i < 22; i++) expect<u8>(target[i]).toBe(expected[i]);
+  });
+
+  it("should allocate buffers with initialized data", () => {
+    let buff = Buffer.alloc<i32>(20, 42);
+    for (let i = 0; i < 20; i++) expect<u8>(buff[i]).toBe(42);
+  });
+
+  it("should fill buffers with 0xDEADBEEF", () => {
+    let target = new Buffer(10);
+    target.fill<Buffer>(Buffer.from<i32[]>([0xDE, 0xAD, 0xBE, 0xEF]));
+
+    expect<u8>(target[0]).toBe(0xDE);
+    expect<u8>(target[1]).toBe(0xAD);
+    expect<u8>(target[2]).toBe(0xBE);
+    expect<u8>(target[3]).toBe(0xEF);
+    expect<u8>(target[4]).toBe(0xDE);
+    expect<u8>(target[5]).toBe(0xAD);
+    expect<u8>(target[6]).toBe(0xBE);
+    expect<u8>(target[7]).toBe(0xEF);
+    expect<u8>(target[8]).toBe(0xDE);
+    expect<u8>(target[9]).toBe(0xAD);
+  });
+
+  it("should fill buffers with 'DEADBEEF' in hex", () => {
+    let target = new Buffer(10);
+    target.fill<string>("DEADBEEF", 0, 10, "hex");
+
+    expect<u8>(target[0]).toBe(0xDE);
+    expect<u8>(target[1]).toBe(0xAD);
+    expect<u8>(target[2]).toBe(0xBE);
+    expect<u8>(target[3]).toBe(0xEF);
+    expect<u8>(target[4]).toBe(0xDE);
+    expect<u8>(target[5]).toBe(0xAD);
+    expect<u8>(target[6]).toBe(0xBE);
+    expect<u8>(target[7]).toBe(0xEF);
+    expect<u8>(target[8]).toBe(0xDE);
+    expect<u8>(target[9]).toBe(0xAD);
   });
 });
