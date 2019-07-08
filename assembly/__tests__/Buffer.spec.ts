@@ -239,4 +239,118 @@ describe("Buffer", () => {
     expect<i32>(subarray.byteOffset).toBe(1);
     expect<u8>(subarray[0]).toBe(2);
   });
+
+  it("should fill a buffer", () => {
+    let arr = new Buffer(100);
+    arr.fill(100);
+    for(let i = 0; i < 100; i++) expect<u8>(arr[i]).toBe(100);
+  });
+
+  it("should sort a buffer", () => {
+    let array = Buffer.from<i32[]>([5, 2, 3, 1, 4]).sort();
+    expect<u8>(array[0]).toBe(1);
+    expect<u8>(array[1]).toBe(2);
+    expect<u8>(array[2]).toBe(3);
+    expect<u8>(array[3]).toBe(4);
+    expect<u8>(array[4]).toBe(5);
+  });
+
+  it("should include values", () => {
+    let buffer = Buffer.from<i32[]>([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    let included = Buffer.from<i32[]>([4, 5, 6]);
+    expect<bool>(buffer.includes<Buffer>(included)).toBeTruthy();
+  });
+
+  it("should not include values", () => {
+    let buffer = Buffer.from<i32[]>([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    let included = Buffer.from<i32[]>([2, 5, 6]);
+    expect<bool>(buffer.includes<Buffer>(included)).toBeFalsy()
+  });
+
+  it("should include utf8 values", () => {
+    let buffer = Buffer.from<string>("valid aBcDeFgHiJkLmNoP", "utf8");
+    expect<bool>(buffer.includes<string>("DeFg", 0, "utf8")).toBeTruthy();
+  });
+
+  it("should include utf16 values", () => {
+    let buffer = Buffer.from<string>("valid aBcDeFgHiJkLmNoP", "utf16le");
+    expect<bool>(buffer.includes<string>("DeFg", 0, "utf16le")).toBeTruthy();
+  });
+
+  it("should swap 16 bit values", () => {
+    let buffer = Buffer.from<i32[]>([0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8]);
+    buffer.swap16();
+    expect<u8>(buffer[0]).toBe(0x2);
+    expect<u8>(buffer[1]).toBe(0x1);
+    expect<u8>(buffer[2]).toBe(0x4);
+    expect<u8>(buffer[3]).toBe(0x3);
+    expect<u8>(buffer[4]).toBe(0x6);
+    expect<u8>(buffer[5]).toBe(0x5);
+    expect<u8>(buffer[6]).toBe(0x8);
+    expect<u8>(buffer[7]).toBe(0x7);
+  });
+
+  itThrows("when the buffer length is not the correct size for swap16", () => {
+    let buffer = Buffer.from<i32[]>([0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8, 0x9]);
+    buffer.swap16();
+  });
+
+  it("should swap 32 bit values", () => {
+    let buffer = Buffer.from<i32[]>([0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8]);
+    buffer.swap32();
+    expect<u8>(buffer[0]).toBe(0x4);
+    expect<u8>(buffer[1]).toBe(0x3);
+    expect<u8>(buffer[2]).toBe(0x2);
+    expect<u8>(buffer[3]).toBe(0x1);
+    expect<u8>(buffer[4]).toBe(0x8);
+    expect<u8>(buffer[5]).toBe(0x7);
+    expect<u8>(buffer[6]).toBe(0x6);
+    expect<u8>(buffer[7]).toBe(0x5);
+  });
+
+  itThrows("when the buffer length is not the correct size for swap32", () => {
+    let buffer = Buffer.from<i32[]>([0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8, 0x9]);
+    buffer.swap32();
+  });
+
+  it("should swap 64 bit values", () => {
+    let buffer = Buffer.from<i32[]>([0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8, 0x9, 0xA, 0xB, 0xC, 0xD, 0xE, 0xF, 0x10]);
+    buffer.swap64();
+    expect<u8>(buffer[0]).toBe(0x8);
+    expect<u8>(buffer[1]).toBe(0x7);
+    expect<u8>(buffer[2]).toBe(0x6);
+    expect<u8>(buffer[3]).toBe(0x5);
+    expect<u8>(buffer[4]).toBe(0x4);
+    expect<u8>(buffer[5]).toBe(0x3);
+    expect<u8>(buffer[6]).toBe(0x2);
+    expect<u8>(buffer[7]).toBe(0x1);
+    expect<u8>(buffer[8]).toBe(0x10);
+    expect<u8>(buffer[9]).toBe(0xF);
+    expect<u8>(buffer[10]).toBe(0xE);
+    expect<u8>(buffer[11]).toBe(0xD);
+    expect<u8>(buffer[12]).toBe(0xC);
+    expect<u8>(buffer[13]).toBe(0xB);
+    expect<u8>(buffer[14]).toBe(0xA);
+    expect<u8>(buffer[15]).toBe(0x9);
+  });
+
+  itThrows("when the buffer length is not the correct size for swap64", () => {
+    let buffer = Buffer.from<i32[]>([0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8, 0x9]);
+    buffer.swap64();
+  });
+
+  it("should return 'hello world' with toString using utf8 encoding", () => {
+    let buff = Buffer.from<i32[]>([0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x20, 0x77, 0x6f, 0x72, 0x6c, 0x64]);
+    expect<string>(buff.toString()).toBe("hello world");
+  });
+
+  it("should initialize a hello world string from hex", () => {
+    let buff = Buffer.from<string>("68656c6c6f20776f726c64", "hex");
+    expect<string>(buff.toString()).toBe("hello world");
+  });
+
+  it("should return strings with correct values using hex encoding", () => {
+    let actual: string = Buffer.from<string>("hello world").toString("hex");
+    expect<string>(actual).toBe("68656c6c6f20776f726c64");
+  });
 });
