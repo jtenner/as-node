@@ -144,4 +144,16 @@ export class Buffer extends Uint8Array {
     assert(offset <= this.dataLength - 4);
     return load<u32>(this.dataStart + offset);
   }
+
+  subarray(begin: i32 = 0, end: i32 = this.length): Buffer {
+    var len = this.length;
+    begin = begin < 0 ? max(len + begin, 0) : min(begin, len);
+    end   = end   < 0 ? max(len + end,   0) : min(end,   len);
+    end   = max(end, begin);
+    var out = changetype<Buffer>(__alloc(offsetof<Buffer>(), idof<Buffer>())); // retains
+    out.data = this.data; // retains
+    out.dataStart = this.dataStart + (<usize>begin);
+    out.dataLength = (end - begin);
+    return out;
+  }
 }

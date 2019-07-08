@@ -229,4 +229,14 @@ describe("Buffer", () => {
     let buffer = new Buffer(4);
     buffer.readUInt32LE(1); // throws here
   });
+
+  it("should make a subarray", () => {
+    let arr = Buffer.from<i32[]>([1, 2, 3]);
+
+    let subarray = arr.subarray(1, 2);
+    expect<Buffer>(subarray).toHaveLength(1);
+    expect<i32>(subarray.byteLength).toBe(1);
+    expect<i32>(subarray.byteOffset).toBe(1);
+    expect<u8>(subarray[0]).toBe(2);
+  });
 });
