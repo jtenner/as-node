@@ -1,0 +1,26 @@
+{
+  "name": "as-node",
+  "version": "1.0.0",
+  "description": "This is a temporary place to store the AssemblyScript node.js apis",
+  "main": "index.js",
+  "scripts": {
+    "test": "asp",
+    "asbuild:untouched": "asc assembly/index.ts -b build/untouched.wasm -t build/untouched.wat --sourceMap --validate --debug",
+    "asbuild:optimized": "asc assembly/index.ts -b build/optimized.wasm -t build/optimized.wat --sourceMap --validate --optimize",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jtenner/as-node.git"
+  },
+  "author": "Joshua <tenner.joshua@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jtenner/as-node/issues"
+  },
+  "homepage": "https://github.com/jtenner/as-node#readme",
+  "devDependencies": {
+    "as-pect": "github:jtenner/as-pect",
+    "assemblyscript": "github:assemblyscript/assemblyscript"
+  }
+}
