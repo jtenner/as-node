@@ -60,7 +60,7 @@ export namespace Encoding {
         store<u16>(output + (stringIndex << 1), charFrom(byte & 0xF), 2);
       }
 
-      return changetype<String>(__retain(output)); // retains
+      return changetype<String>(output); // retains
     }
   }
 }
